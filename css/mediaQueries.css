@@ -1,0 +1,27 @@
+@media (max-width: 767.98px) {
+  .nav-item {
+    padding-top: 15px;
+  }
+  .logo {
+    width: 24%;
+  }
+  .navbar-nav {
+    padding-top: 53px;
+  }
+  .outline-div {
+    text-shadow: 0 13.36px 8.896px #2c482e, 0 -2px 1px #aeffb4;
+    color: #fff;
+    position: absolute;
+    top: 100px;
+    z-index: 1;
+    bottom: 9px;
+    left: 0;
+    text-align: center;
+  }
+  .outline {
+    font-size: 40px;
+  }
+  .carousel-item {
+    height: 28vh;
+  }
+}
