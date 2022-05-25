@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link rel="stylesheet" href="../css/mediaQueries.css" />
+
+    <title>Zero Degree Homestay</title>
+  </head>
+  <body>
+    <!-- ======================navbar============================== -->
+    <nav class="navbar navbar-expand-xl sticky-top">
+      <div class="container">
+        <!-- <a class="" href="#"> -->
+        <img
+          src="../images/logos/homeStay.jpeg"
+          class="img-fluid logo"
+          alt=""
+        />
+        <!-- </a> -->
+        <button
+          class="navbar-toggler bg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">HOME</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                ABOUT US
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">About Property</a></li>
+                <li><a class="dropdown-item" href="#">About Host</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                ROOMS
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdown"
+                style="width: 30vh"
+              >
+                <div class="row">
+                  <div class="col-6">
+                    <li><a class="dropdown-item" href="#">Room 1</a></li>
+                  </div>
+                  <div class="col-6">
+                    <li><a class="dropdown-item" href="#">Room3</a></li>
+                  </div>
+                  <div class="col-6">
+                    <li><a class="dropdown-item" href="#">Room 2</a></li>
+                  </div>
+                  <div class="col-6">
+                    <li><a class="dropdown-item" href="#">Room 4</a></li>
+                  </div>
+                </div>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#"> Food and Beverage</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#"> Reservation</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#"> Do's and Don't</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">CONTACT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">EXPERIENCES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">GALLERY</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <button
+              type="button"
+              class="btn btn-book-your-room"
+              data-bs-toggle="modal"
+              data-bs-target="#bookYourRoom"
+            >
+              Book Your Room
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==================================Model==================================================== -->
+    <div
+      class="modal fade mt-5"
+      id="bookYourRoom"
+      tabindex="-1"
+      aria-labelledby="bookYourRoomLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-warning" id="bookYourRoomLabel">
+              Zero Degree Homestay
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Sucess  Message -->
+            <div class="alert alert-success" role="alert" id="alert">
+              Thanks for Contacting us..! We Will Contact You Soon...
+            </div>
+            <form
+              method="post"
+              autocomplete="off"
+              name="google-sheet"
+              id="configform"
+            >
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="Name"
+                  class="form-control mt-3"
+                  placeholder="Guest Name *"
+                  value=""
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="Email"
+                  class="form-control mt-3"
+                  placeholder="Email *"
+                  value=""
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  name="Phone"
+                  class="form-control mt-3"
+                  placeholder="Contact Number *"
+                  value=""
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <div class="mt-3">Check-In</div>
+                <input
+                  type="date"
+                  name="CheckinDate"
+                  class="form-control"
+                  placeholder="Check-in *"
+                  value=""
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <div class="mt-3">Check-In</div>
+                <input
+                  type="date"
+                  name="CheckoutDate"
+                  class="form-control"
+                  placeholder="Checkout *"
+                  value=""
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="numberofguests"
+                  name="NumberofGuests"
+                  class="form-control mt-3"
+                  placeholder="Number of Guests *"
+                  value=""
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="submit"
+                  name="submit"
+                  class="btnSubmit btn-book-your-room mt-4"
+                  value="Submit"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ==================================carousal================================================= -->
+    <div
+      id="carouselExampleFade"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active justify-content-center">
+          <img
+            src="../images/hero/hero-zero.jpeg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../images/hero/hero3.jpeg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="outline-div">
+      <p class="outline">Zero Degree Homestay</p>
+      <div class="outline-sub">Lower Auli</div>
+    </div>
+
+    <!-- Blogs -->
+    <div class="container-fluid">
+      <h1 class="text-center sm-p mt-5">BLOGS</h1>
+      <div
+        class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 mt-lg-2 align-items-center"
+      >
+        <div class="col-sm-12 col-md-6 col-lg-3 col-12">
+          <a
+            class="blog-headings"
+            href=""
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            <div class="p-2 img-hover-zoom">
+              <img src="../images/hero/hero3.jpeg" alt="" class="img-fluid" />
+              <h4 class="pt-3 text">Why we chose the place our home.</h4>
+              <h6 class="sm-p text">Home is where heart is.</h6>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 col-12">
+          <a class="blog-headings" href="">
+            <div class="p-2 img-hover-zoom">
+              <img src="../images/hero/hero3.jpeg" alt="" class="img-fluid" />
+              <h4 class="text pt-3">Why we chose the place our home.</h4>
+              <h6 class="sm-p text">Home is where heart is.</h6>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 col-12">
+          <a class="blog-headings" href="">
+            <div class="p-2 img-hover-zoom">
+              <img src="../images/hero/hero3.jpeg" alt="" class="img-fluid" />
+              <h4 class="text pt-3">Why we chose the place our home.</h4>
+              <h6 class="sm-p text">Home is where heart is.</h6>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 col-12">
+          <div class="text-center">
+            <div class="more-blogs">
+              click here for the <br />
+              more blogs
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================================HOW TO FIND US========================================= -->
+      <div id="contact"></div>
+      <h1 class="text-center sm-p mt-5 pt-5">HOW TO FIND US</h1>
+      <div
+        class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 mt-lg-2 align-items-center"
+      >
+        <div class="col-sm-12 col-md-4 col-lg-4 col-12 text-center">
+          <div class="how-to-find-div">
+            <i class="fa-solid fa-location-arrow icon-LEP mb-3"></i>
+            <p class="mx-3">LOCATION</p>
+            <p>Lower Auli, Uttarakhand</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4 col-12 text-center">
+          <div class="how-to-find-div">
+            <i class="fa-solid fa-square-phone icon-LEP mb-3"></i>
+            <p>PHONE US</p>
+            <p class="mx-3">+(91) 88650 39338</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4 col-12 text-center">
+          <div class="how-to-find-div">
+            <i class="fa-solid fa-envelope-open-text icon-LEP mb-3"></i>
+            <p class="mx-3">EMAIL US</p>
+            <p class="without-space-wrap-text">
+              zerodegreehomestayauli@gmail.com
+            </p>
+          </div>
+        </div>
+      </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3436.13335169395!2d79.56352933289051!3d30.54553624316701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a79d01739879d1%3A0x8e21fcad14a24981!2sZero%20Degree%20Homestay!5e0!3m2!1sen!2sin!4v1651313516813!5m2!1sen!2sin"
+        width="100%"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <!-- ==========================GOOGLE REVIEWS============================== -->
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <div class="elfsight-app-46872cb0-2bc1-402a-9611-702d8ac65115"></div>
+    <!-- ===========================Footer Section========================================= -->
+    <div class="footer mt-3 p-lg-5">
+      <div class="p-lg-5">
+        <div class="row g-2 g-lg-3 text-center">
+          <div class="col-sm-4 col-md-4 col-lg-4 col-12">
+            <h6 class="text-white pt-lg-0 pt-4">ABOUT US</h6>
+            <div class="pt-1 about-footer">Things To Do</div>
+            <div class="pt-3 about-footer">Services</div>
+            <div class="pt-3 about-footer">Contact Us</div>
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4 col-12">
+            <h6 class="text-white pt-lg-0 pt-4">INFORMATION</h6>
+            <div class="about-footer pt-1">Lower Auli, Uttarakhand</div>
+            <h6 class="text-white pt-3">CALL FOR RESERVATIONS</h6>
+            <div class="about-footer pt-2">+(91) 88650 39338</div>
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4 col-12">
+            <h6 class="text-white pt-lg-0 pt-4 pb-1">SOCIAL MEDIA</h6>
+            <a
+              href="https://instagram.com/zerodegreehomestayauli?utm_medium=copy_link"
+              class="about-footer"
+            >
+              <img
+                src="../images/social-media/instagram.png"
+                width="5%"
+                alt=""
+              />
+            </a>
+
+            <a
+              href="https://instagram.com/zerodegreehomestayauli?utm_medium=copy_link"
+              class=""
+            >
+              <img
+                src="../images/social-media/facebook.png"
+                width="5%"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://www.google.com/travel/hotels/s/sZBpdKcBQq6BEy1TA"
+              class="about-footer"
+            >
+              <img src="../images/social-media/google.png" width="5%" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Model  of Blogs -->
+    <div id="exampleModal" class="modal text-center">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="">
+            <h1 class="modal-title sm-p pt-5">
+              Why we chose the place our home
+            </h1>
+            <h4>Home is where heart is.</h4>
+          </div>
+          <div class="modal-body container blog-text-model">
+            "How far is it from road? Won't it be difficult to operate from so
+            far? What is the condition of home? Will it be possible to cater the
+            comfortable stay here? What kinda washrooms they have? Is the water
+            supply a problem? Will the owner be cooperative?" So many questions
+            running through my mind while my brother is singing praises that are
+            flying so far up in the sky, as my brain is preoccupied. Bhai parked
+            the car as we reached the destination. I stepped out of the car
+            uncertain, skeptic; when, apple laden orchard, sky scrapping snow
+            covered peaks, lush greenery and small wild flowers of all colours;
+            yellow, white, red, greeted my eyes, while a gentle breeze flew
+            through, filling each body cell with new life, washing away all the
+            worries, calming all nerves and there stood the house in the midst;
+            faded colour, torn roof, scraped walls still beautiful. A downhill
+            trail; few stairs and a pathway took us to the house and the moment
+            I reached, I was left awestruck with the magnanimous view of Nanda
+            Ghutni peak in front, all white, snow-clad; making all my worries
+            look minute, its permanence radiating stillness to my thoughts and
+            clearing out all the noise, bringing me closer to voice of my heart.
+            I sat there for minutes not realising how much time had passed. The
+            location offering panoramic view of highest snow-clad peaks from 3
+            sides and oak forest from 4th; Sleeping beauty range of peaks,
+            Mukut, Haathi-Ghodi peak, Brahmal, and the majestic Nanda-Ghunti to
+            mention a few. The most amazing Sunrise and sunset, offering longest
+            sun hours in the cold winters. Talking of the house; a stone built 5
+            bedroom bungalow, a kitchen, a backyard and an apple orchard in
+            front. Situated as such, offering solitude with nature; no other
+            houses around. Variety of bird species chirping, a treat for bird
+            lovers. My heart immediately called it home. Then went months of
+            repairing and making sure of each and every part of home is
+            functioning properly. Abhishek (my husband) and I have poured our
+            hearts and sweat in making this home a comfortable and stress
+            busting retreat for you. Hope you will find the same pleasure here,
+            as we did.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-close-blog"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("#alert").hide();
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxKDhSDcFeZHSgATsiYDNi-u2FcLHZ5mQKp-V5NEHlBZuVXig/exec";
+      const form = document.forms["google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) }).then(
+          (response) => $("#alert").show()
+        );
+        $("#configform")[0]
+          .reset()
+          .catch((error) => console.error("Error!", error.message));
+      });
+
+      $(".btn-close").click(function () {
+        location.reload();
+      });
+    </script>
+  </body>
+</html>
